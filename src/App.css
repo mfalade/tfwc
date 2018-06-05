@@ -4,6 +4,9 @@
   font-weight: 100;
   line-height: 1.5rem; }
 
+p, h1, h2, h3, h4, h5, h6 {
+  color: #525c65; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -31,11 +34,25 @@ body {
   margin: 0 5rem; }
 
 .header {
-  padding: 3rem 0 1rem;
-  text-align: center; }
+  background: #FFF;
+  padding: 2rem 0 2rem;
+  text-align: center;
+  border-bottom: 1px solid #eee; }
+  .header h3 {
+    font-size: 1em !important;
+    transition: font-size .4s ease-in-out; }
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+    .header.sticky h3 {
+      font-size: 1.2em !important; }
+  .header.sticky + .container {
+    padding-top: 102px; }
   .header img {
     position: relative;
-    top: 5px;
+    top: 6px;
+    padding: 0 6px;
     width: 25px;
     height: auto; }
   .header h3 {
@@ -44,21 +61,21 @@ body {
 
 .hero-wrapper {
   margin-top: 3rem;
-  min-height: 30rem;
-  border: 1px solid #EEE;
+  min-height: 32rem;
+  border: 1px solid #eee;
   border-radius: 5px;
   background: linear-gradient(33deg, rgba(255, 0, 0, 0.45), rgba(255, 0, 128, 0.32)), url("./assets/images/tfwc2.jpeg") no-repeat center center;
   background-size: cover;
   text-align: center;
-  color: white;
   display: grid; }
+  .hero-wrapper * {
+    color: #FFF; }
   .hero-wrapper .hero-content {
     margin: auto;
     padding: 0 10rem; }
-    .hero-wrapper .hero-content h5 {
-      margin-bottom: 0.85rem; }
     .hero-wrapper .hero-content h1 {
-      margin-bottom: 1.6rem; }
+      margin-top: 2.3rem;
+      margin-bottom: 2.3rem; }
 
 .meta-container {
   margin: 5em auto;
@@ -70,13 +87,47 @@ body {
     .meta-container--content:not(:first-child) {
       border-left: 1px solid #dbe2e8; }
     .meta-container--content h5 {
-      color: #7d97ad;
       font-weight: 400;
-      text-transform: uppercase;
-      padding-bottom: 1em; }
+      text-transform: uppercase; }
     .meta-container--content h3 {
+      padding-top: .5em;
+      padding-bottom: .5em;
       color: #424548;
       font-weight: 400; }
     .meta-container--content p {
-      font-size: .85em;
-      color: #7d97ad; }
+      font-size: .85em; }
+
+.course-steps-wrapper {
+  margin-left: 75px;
+  display: grid;
+  grid-template-columns: 55%; }
+  .course-steps-wrapper ol {
+    counter-reset: course-steps; }
+    .course-steps-wrapper ol li {
+      list-style-type: none;
+      padding: 3.5em 0; }
+      .course-steps-wrapper ol li p {
+        padding-top: 2.25em;
+        line-height: 2rem; }
+      .course-steps-wrapper ol li .checkbox {
+        margin-bottom: 30px; }
+      .course-steps-wrapper ol li input[type="checkbox"] {
+        height: 12px;
+        width: 12px;
+        margin-right: 20px;
+        border-radius: 50%; }
+        .course-steps-wrapper ol li input[type="checkbox"]:before {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px; }
+    .course-steps-wrapper ol li::before {
+      font-weight: 200;
+      font-size: 2.5rem;
+      margin-bottom: 2em;
+      counter-increment: course-steps;
+      content: "Step " counter(course-steps); }
+
+.course-pricing {
+  margin-top: 3rem;
+  text-align: center; }
