@@ -1,10 +1,11 @@
 import React from 'react';
+import Logo from '../../assets/images/logo.jpg';
 
 const Header = () => {
   return (
     <div className="header">
       <h3>
-        The Five Weeks Course
+        <span>The </span><img src={Logo} alt="App Logo" /><span> Weeks Course</span>
       </h3>
     </div>
   );
