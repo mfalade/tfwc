@@ -3,8 +3,8 @@ import { Button } from '../FormElements';
 
 const Faq = props => (
   <div className="faq">
-    <h1 className="mtl mbm">FAQ</h1>
-    <h2 className="mtm mbm bold-4">Why should I enroll in the Android Developer Nanodegree program?</h2>
+    <h1 className="mtl">FAQ</h1>
+    <h2 className="mtm bold-4">Why should I enroll in the Android Developer Nanodegree program?</h2>
     <p>
       If you are a Java programmer who is interested in mastering the 
       Android platform and building top-rated Android apps, this is 

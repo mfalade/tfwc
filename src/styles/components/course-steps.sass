@@ -1,0 +1,46 @@
+.course-steps-wrapper
+  margin-left: 75px
+  display: grid
+  grid-template-columns: 55%
+
+  @include respond-to('size-xs')
+     margin-left: 0
+     padding: 0 1.2em
+     grid-template-columns: 1fr
+
+  ol
+    counter-reset: course-steps
+
+    li  
+      list-style-type: none
+      padding: 3.5em 0
+
+      @include respond-to('size-xs')
+        padding: 1.5em 0
+
+      p
+        padding-top: 1em
+        line-height: 2rem
+
+      .checkbox
+        margin-bottom: 30px
+      
+      input[type="checkbox"]
+        height: 12px
+        width: 12px
+        margin-right: 20px
+        border-radius: 50%
+
+        &:before
+          content: ''
+          background: 
+          display: block
+          width: 10px
+          height: 10px
+
+    li::before
+      font-weight: 200
+      font-size: 2.5rem
+      margin-bottom: 2em
+      counter-increment: course-steps
+      content: 'Step ' counter(course-steps)

@@ -1,0 +1,36 @@
+.header
+  background: #FFF
+  padding: 2rem 0 2rem
+  text-align: center
+  z-index: 1024
+  border-bottom: 1px solid $gray
+
+  @include respond-to('size-xs')
+    padding: 1rem 0 1rem
+
+  h3
+    font-size: 1em!important
+    transition: font-size .4s ease-in-out
+
+  &.sticky
+    position: fixed
+    top: 0
+    width: 100%
+
+    h3
+      font-size: 1.2em!important
+
+
+  &.sticky + .container 
+    padding-top: 102px
+
+  img
+    position: relative
+    top: 6px
+    padding: 0 6px
+    width: 25px
+    height: auto
+
+  h3
+    font-weight: 200
+    font-size: 1.5rem

@@ -15,7 +15,6 @@ const CourseSteps = props => (
         <p>
           What's wrong with the way you are currently managing products/projects?
         </p>
-        <br />
 
         <div>
           <div className="checkbox">

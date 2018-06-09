@@ -6,6 +6,7 @@ import CourseSteps from '../../components/CourseSteps/CourseSteps';
 import CoursePricing from '../../components/CoursePricing/CoursePricing';
 import WhatYouWillLearn from '../../components/WhatYouWillLearn';
 import Faq from '../../components/Faq';
+import Footer from '../../components/Footer';
 
 export class HomeContainer extends React.Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ export class HomeContainer extends React.Component {
           <CoursePricing />
           <WhatYouWillLearn />
           <Faq />
+          <Footer />
         </div>
       </div>
     )

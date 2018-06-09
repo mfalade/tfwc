@@ -14,19 +14,19 @@ const MetaData = (props) => {
       <div className="meta-container--content">
         <h5>time</h5>
         <h3>None</h3>
-        <p />
+        <p className="empty-cell" />
       </div>
 
       <div className="meta-container--content">
         <h5>student rating</h5>
-        <h3>&nbsp;</h3>
+        <h3 className="empty-cell">&nbsp;</h3>
         <p>View all reviews (2353)</p>        
       </div>
       
       <div className="meta-container--content">
         <h5>estimated salary</h5>
         <h3>ngn150k to ngn ngn800k</h3>
-        <p />        
+        <p className="empty-cell" />        
       </div>
     </div>
   );
