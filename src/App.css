@@ -7,23 +7,48 @@
 p, h1, h2, h3, h4, h5, h6 {
   color: #525c65; }
 
+.mtl {
+  margin-top: 4em; }
+
+.mbl {
+  margin-bottom: 4em; }
+
+.mtm {
+  margin-top: 2em; }
+
+.mbm {
+  margin-bottom: 2em; }
+
+.vml {
+  margin-top: 5em;
+  margin-bottom: 5em; }
+
+.vmm {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+.vms {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.bold-3 {
+  font-weight: 300; }
+
+.bold-4 {
+  font-weight: 400; }
+
+.bold-5 {
+  font-weight: 500; }
+
+.text-center {
+  width: 100%;
+  text-align: center; }
+
 .uppercase {
   text-transform: uppercase; }
 
 h1 {
   font-size: 2.5rem; }
-
-button {
-  height: 2.75rem;
-  width: 13rem;
-  font-weight: 100;
-  outline: none;
-  border: none;
-  text-transform: uppercase;
-  color: #FFF;
-  font-size: .8em;
-  border-radius: 3px;
-  background: rgba(255, 0, 0, 0.45); }
 
 body {
   margin: 0;
@@ -37,6 +62,7 @@ body {
   background: #FFF;
   padding: 2rem 0 2rem;
   text-align: center;
+  z-index: 1024;
   border-bottom: 1px solid #eee; }
   .header h3 {
     font-size: 1em !important;
@@ -67,7 +93,8 @@ body {
   background: linear-gradient(33deg, rgba(255, 0, 0, 0.45), rgba(255, 0, 128, 0.32)), url("./assets/images/tfwc2.jpeg") no-repeat center center;
   background-size: cover;
   text-align: center;
-  display: grid; }
+  display: grid;
+  box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
   .hero-wrapper * {
     color: #FFF; }
   .hero-wrapper .hero-content {
@@ -80,10 +107,14 @@ body {
 .meta-container {
   margin: 5em auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; }
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
   .meta-container--content {
     text-align: center;
-    margin-bottom: 5em; }
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 1em;
+    margin-bottom: 1em; }
     .meta-container--content:not(:first-child) {
       border-left: 1px solid #dbe2e8; }
     .meta-container--content h5 {
@@ -130,4 +161,119 @@ body {
 
 .course-pricing {
   margin-top: 3rem;
+  margin-bottom: 3rem;
   text-align: center; }
+  .course-pricing-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 5rem; }
+  .course-pricing .pricing-card {
+    width: 21em;
+    height: 25em;
+    border-radius: 3px;
+    box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
+    .course-pricing .pricing-card--body {
+      padding: 2em; }
+      .course-pricing .pricing-card--body h3 {
+        font-weight: 400;
+        color: #666; }
+      .course-pricing .pricing-card--body h1 {
+        padding: .75em 0 .75em; }
+      .course-pricing .pricing-card--body .horizontal-rule {
+        height: 2px;
+        background: #ff98a4;
+        margin: 1em .75em; }
+    .course-pricing .pricing-card--header {
+      height: 75px;
+      display: flex;
+      justify-content: space-between; }
+    .course-pricing .pricing-card--corner-triangle {
+      overflow: hidden; }
+      .course-pricing .pricing-card--corner-triangle:after {
+        position: relative;
+        display: block;
+        content: '';
+        background: linear-gradient(33deg, rgba(255, 0, 0, 0.45), rgba(255, 0, 128, 0.32));
+        width: 200px;
+        height: 30px;
+        transform: rotate(45deg);
+        top: -15px;
+        left: 50px; }
+    .course-pricing .pricing-card--banner {
+      display: flex;
+      height: 4em;
+      overflow: hidden; }
+      .course-pricing .pricing-card--banner * {
+        color: #FFF; }
+      .course-pricing .pricing-card--banner .banner-content {
+        padding: .4em 2em;
+        background: linear-gradient(33deg, rgba(255, 0, 0, 0.45), rgba(255, 0, 128, 0.32));
+        align-self: flex-end; }
+        .course-pricing .pricing-card--banner .banner-content:after {
+          border-color: rgba(145, 218, 238, 0.3); }
+
+button {
+  height: 2.75rem;
+  width: 13rem;
+  font-weight: 100;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: .8em;
+  border-radius: 3px;
+  background: rgba(255, 0, 0, 0.45); }
+  button.lg {
+    height: 3.5rem;
+    width: 17.5rem;
+    font-size: 1em; }
+
+.banner {
+  color: #FFF;
+  background: rgba(255, 0, 0, 0.45);
+  width: 130px;
+  height: 30px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px; }
+
+.card {
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
+  .card.expanded {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .card .card-header {
+    height: 50px;
+    display: flex;
+    align-items: flex-end; }
+  .card .two-halves {
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
+  .card .left-half-container {
+    padding: 2em 4em; }
+    .card .left-half-container .card-cta {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #eee;
+      padding-top: 1em;
+      margin-top: 2em; }
+
+.more-details {
+  opacity: 0;
+  height: 0;
+  overflow: hidden; }
+  .more-details .wrapper {
+    padding: 4em; }
+  .more-details.expanded {
+    opacity: 1;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 30em;
+    transition: height .4s ease-in-out, opacity .4s ease-in-out .2s; }
+  .more-details.collapsed {
+    opacity: 0;
+    height: 0;
+    transition: height .3s ease-in-out .1s, opacity .1s ease-in-out .3s; }

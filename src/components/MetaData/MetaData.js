@@ -7,7 +7,7 @@ const MetaData = (props) => {
 
       <div className="meta-container--content">
         <h5>time</h5>
-        <h3>Learn at our own pace</h3>
+        <h3>Learn at our yown pace</h3>
         <p>Email course delivered over 5-weeks</p>
       </div>
 
