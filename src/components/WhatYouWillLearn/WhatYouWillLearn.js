@@ -57,56 +57,59 @@ class WhatYouWillLearn extends Component {
 
         <div className={childClassNames}>
           <div className="card-body">
-            <div className="wrapper">
-              <h4 className="uppercase bold-5">Prerequisite Knowledge</h4>
-              <p>
-                You should have 1-2 years of experience programming in Java or another object-oriented
-                language like Python or C++, and must be proficient using Git and GitHub.
-              </p>
+            <div className="wrapper course-summary">
+              <div>
+                <h4 className="uppercase bold-5">Prerequisite Knowledge</h4>
+                
+                <p>
+                  You should have 1-2 years of experience programming in Java or another object-oriented
+                  language like Python or C++, and must be proficient using Git and GitHub.
+                </p>
 
-              <div className="course-sections">
-                <ul>
-                  <li>
-                    <h4>Welcome to Your Nanodegree program</h4>
-                    <p>
-                      Welcome! Here’s an overview of the program, along with some
-                      helpful resources to get you started.
-                    </p>
-                  </li>
+                <div className="course-sections">
+                  <ul>
+                    <li>
+                      <h4>Welcome to Your Nanodegree program</h4>
+                      <p>
+                        Welcome! Here’s an overview of the program, along with some
+                        helpful resources to get you started.
+                      </p>
+                    </li>
 
-                  <li>
-                    <h4>Developing Android Apps</h4>
-                    <p>
-                      Work with instructors step-by-step to build a cloud-connected Android app.
-                      Blending theory and practice, learn how to build great apps the right way.
-                    </p>
-                  </li>
-                  
-                  <li>
-                    <h4>Gradle for Android and Java</h4>
-                    <p>
-                      Learn how to customize your Gradle build, and explore advanced topics like: 
-                      app testing, configuring free vs. paid apps, and creating and integrating libraries.
-                    </p>
-                  </li>
-                  
-                  <li>
-                    <h4>Material Design for Android Developers</h4>
-                    <p>
-                      Apply the design principles that define Android's visual language to your apps, 
-                      using material design elements, transitions and graphics, across multiple form factors.
-                    </p>
-                  </li>
-                  
-                  <li>
-                    <h4>Capstone Project</h4>
-                    <p>
-                      Integrate all you've learned in this program to bring your own app idea to life, 
-                      and publish your app to Google Play.
-                    </p>
-                  </li>
+                    <li>
+                      <h4>Developing Android Apps</h4>
+                      <p>
+                        Work with instructors step-by-step to build a cloud-connected Android app.
+                        Blending theory and practice, learn how to build great apps the right way.
+                      </p>
+                    </li>
+                    
+                    <li>
+                      <h4>Gradle for Android and Java</h4>
+                      <p>
+                        Learn how to customize your Gradle build, and explore advanced topics like: 
+                        app testing, configuring free vs. paid apps, and creating and integrating libraries.
+                      </p>
+                    </li>
+                    
+                    <li>
+                      <h4>Material Design for Android Developers</h4>
+                      <p>
+                        Apply the design principles that define Android's visual language to your apps, 
+                        using material design elements, transitions and graphics, across multiple form factors.
+                      </p>
+                    </li>
+                    
+                    <li>
+                      <h4>Capstone Project</h4>
+                      <p>
+                        Integrate all you've learned in this program to bring your own app idea to life, 
+                        and publish your app to Google Play.
+                      </p>
+                    </li>
 
-                </ul>
+                  </ul>
+                </div>
               </div>
             </div>
             <div></div>

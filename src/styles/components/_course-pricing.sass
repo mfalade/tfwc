@@ -11,7 +11,7 @@
         grid-template-columns: 1fr 1fr 1fr
         padding-top: 5rem
 
-        +respond-to("size-xs")
+        @include respond-to("size-xs")
             grid-template-columns: 1fr
 
     .pricing-card
@@ -21,9 +21,8 @@
         border-radius: 3px
         box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2)
 
-        +respond-to("size-xs")
+        @include respond-to("size-xs")
             margin-bottom: 1.5em
-
 
         &--body
             padding: 2em
