@@ -221,7 +221,7 @@ h1 {
         top: 5px;
         left: 50px; }
     .course-pricing .pricing-card--banner {
-      margin-top: 10px;
+      margin-top: 15px;
       overflow: hidden; }
 
 .course-sections .two-halves {
@@ -401,5 +401,5 @@ button {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
   .card .card-header {
-    padding-top: 10px;
+    padding-top: 15px;
     height: 50px; }
