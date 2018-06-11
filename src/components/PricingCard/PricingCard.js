@@ -1,13 +1,14 @@
 import React from 'react';
+import Banner from '../Banner';
 
 const PricingCard = props => {
   return (
     <div className="pricing-card">
       <div className="pricing-card--header">
         <div className="pricing-card--banner">
-          <div className="banner-content">
-            <h5>best value</h5>
-          </div>
+          <Banner>
+            <p>best value</p>
+          </Banner>
         </div>
         <div className="pricing-card--corner-triangle"></div>
       </div>

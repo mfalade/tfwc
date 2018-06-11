@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Banner from '../Banner';
 
 class WhatYouWillLearn extends Component {
   state = {
@@ -33,7 +34,9 @@ class WhatYouWillLearn extends Component {
 
         <div className={parentClassNames}>
           <div className="card-header">
-            <div className="banner">Syllabus</div>
+            <Banner>
+              <p>Syllabus</p>
+            </Banner>
           </div>
           <div className="card-body two-halves">
             <div className="left-half-container">
