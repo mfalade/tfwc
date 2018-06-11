@@ -25,22 +25,38 @@
       .checkbox
         margin-bottom: 30px
       
-      input[type="checkbox"]
-        height: 12px
-        width: 12px
-        margin-right: 20px
-        border-radius: 50%
-
-        &:before
-          content: ''
-          background: 
-          display: block
-          width: 10px
-          height: 10px
-
     li::before
       font-weight: 200
       font-size: 2.5rem
       margin-bottom: 2em
       counter-increment: course-steps
       content: 'Step ' counter(course-steps)
+
+  .radio-label
+    position: relative
+
+    input[type="checkbox"]
+      position: absolute
+      opacity: 0
+      z-index: -1
+
+      &:checked ~ .fancy-radio
+        background: $pink-deep
+
+    .fancy-radio
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      display: inline-block
+      position: relative
+      margin-right: 15px
+
+      &:after
+        content: ''
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        border: 1px solid $pink-deep
+        position: absolute
+        right: -3px
+        bottom: -3px

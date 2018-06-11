@@ -18,26 +18,30 @@ const CourseSteps = props => (
 
         <div>
           <div className="checkbox">
-            <label htmlFor="optionOne">
+            <label className="radio-label" htmlFor="optionOne">
               <input type="checkbox" name="options" value="one" id="optionOne" />
+              <span className="fancy-radio"/>
               I'm having trouble with writing documents
             </label>
           </div>
           <div className="checkbox">
-            <label htmlFor="optionTwo">
+            <label className="radio-label" htmlFor="optionTwo">
               <input type="checkbox" name="options" value="two" id="optionTwo" />
+              <span className="fancy-radio"/>
               I struggle to come up with new ideas
             </label>
           </div>
           <div className="checkbox">
-            <label htmlFor="optionThree">
+            <label className="radio-label" htmlFor="optionThree">
               <input type="checkbox" name="options" value="three" id="optionThree" />
+              <span className="fancy-radio"/>
               Where does good strategy come from?
             </label>
           </div>
           <div className="checkbox">
-            <label htmlFor="optionFour">
+            <label className="radio-label" htmlFor="optionFour">
               <input type="checkbox" name="options" value="four" id="optionFour" />
+              <span className="fancy-radio"/>
               This is all new to me, and I want to learn
             </label>
           </div>

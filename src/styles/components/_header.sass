@@ -1,16 +1,19 @@
 .header
   background: #FFF
-  padding: 2rem 0 2rem
+  padding: 1.5rem 0
   text-align: center
   z-index: 1024
-  border-bottom: 1px solid $gray
+  border-bottom: 1px solid $gray-light
 
   @include respond-to('size-xs')
     padding: 1rem 0 1rem
 
   h3
-    font-size: 1em!important
-    transition: font-size .4s ease-in-out
+    font-size: 1.2em!important
+    transition: all .4s ease-in-out
+    -webkit-transition: all .4s ease-in-out
+    -moz-transition: all .4s ease-in-out
+    transform: scale(0.8)
 
   &.sticky
     position: fixed
@@ -18,7 +21,7 @@
     width: 100%
 
     h3
-      font-size: 1.2em!important
+      transform: scale(1)
 
 
   &.sticky + .container 

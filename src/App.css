@@ -56,22 +56,25 @@ h1 {
 
 .header {
   background: #FFF;
-  padding: 2rem 0 2rem;
+  padding: 1.5rem 0;
   text-align: center;
   z-index: 1024;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #dbe2e8; }
   @media (max-width: 576px) {
     .header {
       padding: 1rem 0 1rem; } }
   .header h3 {
-    font-size: 1em !important;
-    transition: font-size .4s ease-in-out; }
+    font-size: 1.2em !important;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transform: scale(0.8); }
   .header.sticky {
     position: fixed;
     top: 0;
     width: 100%; }
     .header.sticky h3 {
-      font-size: 1.2em !important; }
+      transform: scale(1); }
   .header.sticky + .container {
     padding-top: 102px; }
   .header img {
@@ -137,22 +140,36 @@ h1 {
         line-height: 2rem; }
       .course-steps-wrapper ol li .checkbox {
         margin-bottom: 30px; }
-      .course-steps-wrapper ol li input[type="checkbox"] {
-        height: 12px;
-        width: 12px;
-        margin-right: 20px;
-        border-radius: 50%; }
-        .course-steps-wrapper ol li input[type="checkbox"]:before {
-          content: '';
-          display: block;
-          width: 10px;
-          height: 10px; }
     .course-steps-wrapper ol li::before {
       font-weight: 200;
       font-size: 2.5rem;
       margin-bottom: 2em;
       counter-increment: course-steps;
       content: "Step " counter(course-steps); }
+  .course-steps-wrapper .radio-label {
+    position: relative; }
+    .course-steps-wrapper .radio-label input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      z-index: -1; }
+      .course-steps-wrapper .radio-label input[type="checkbox"]:checked ~ .fancy-radio {
+        background: #FC939B; }
+    .course-steps-wrapper .radio-label .fancy-radio {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      margin-right: 15px; }
+      .course-steps-wrapper .radio-label .fancy-radio:after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid #FC939B;
+        position: absolute;
+        right: -3px;
+        bottom: -3px; }
 
 .course-pricing {
   margin-top: 3rem;
@@ -235,22 +252,43 @@ h1 {
     padding-top: 1em;
     margin-top: 2em; }
 
-.course-sections ul li {
-  margin-top: 3em; }
-
-.course-sections ul:before {
-  content: "";
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background: red; }
+.course-sections ul {
+  padding-top: 3em;
+  list-style: none;
+  position: relative; }
+  .course-sections ul:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    left: -15px;
+    top: 60px;
+    bottom: 0;
+    opacity: .2;
+    background: #525c65;
+    display: block; }
+  .course-sections ul li {
+    padding: 3em 0 0;
+    position: relative; }
+    .course-sections ul li:first-child {
+      padding-top: 0; }
+      .course-sections ul li:first-child:after {
+        top: 6px; }
+    .course-sections ul li:after {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 54px;
+      border-radius: 50%;
+      width: 11px;
+      height: 11px;
+      background: #FC939B;
+      display: block; }
 
 .course-sections .course-summary {
   display: grid;
   grid-template-columns: 4fr 1fr; }
 
 .course-sections .more-details {
-  opacity: 0;
   height: 0;
   overflow: hidden; }
   .course-sections .more-details .wrapper {
@@ -259,16 +297,14 @@ h1 {
       .course-sections .more-details .wrapper {
         padding: 2em; } }
   .course-sections .more-details.expanded {
-    opacity: 1;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    height: 55em;
+    height: 60em;
     transition: height 0.6s ease-in-out, opacity 0.4s ease-in-out 0.2s; }
     @media (max-width: 576px) {
       .course-sections .more-details.expanded {
         height: 92em; } }
   .course-sections .more-details.collapsed {
-    opacity: 0;
     height: 0;
     transition: height 0.4s ease-in-out 0.1s, opacity 0.1s ease-in-out 0.3s; }
 

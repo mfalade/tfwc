@@ -21,23 +21,48 @@
             margin-top: 2em
 
     ul
-
-        li
-            margin-top: 3em
+        padding-top: 3em
+        list-style: none
+        position: relative
 
         &:before
-            content: ""
-            height: 10px
-            width: 10px
-            border-radius: 50%
-            background: red
+            content: ''
+            position: absolute
+            width: 1px
+            left: -15px
+            top: 60px
+            bottom: 0
+            opacity: .2
+            background: $gray-dark
+            display: block
+
+        li
+            padding: 3em 0 0
+            position: relative
+
+            &:first-child
+                padding-top: 0
+                
+                &:after
+                    top: 6px
+            
+            &:after
+                content: ''
+                position: absolute
+                left: -20px
+                top: 54px
+                border-radius: 50%
+                width: 11px
+                height: 11px
+                background: $pink-deep
+                display: block
+    
 
     .course-summary
         display: grid
         grid-template-columns: 4fr 1fr
 
     .more-details
-        opacity: 0
         height: 0
         overflow: hidden
 
@@ -48,16 +73,15 @@
                 padding: 2em
 
         &.expanded
-            opacity: 1
             border-top-left-radius: 0
             border-top-right-radius: 0
-            height: 55em
+            height: 60em
             transition: height 0.6s ease-in-out, opacity 0.4s ease-in-out 0.2s
 
             +respond-to("size-xs")
                 height: 92em
 
         &.collapsed
-            opacity: 0
+            // opacity: 0
             height: 0
             transition: height 0.4s ease-in-out 0.1s, opacity 0.1s ease-in-out 0.3s
