@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CourseSteps = ({ context }) => {
-  console.log(context, 'context...')
   return (
     <div className="course-steps-wrapper">
       <ol className="course-steps">
@@ -20,7 +19,7 @@ const CourseSteps = ({ context }) => {
           <div>
             <div className="checkbox">
               <label className="radio-label" htmlFor="optionOne">
-                <input type="radio" name="option" onChange={context.updateSelectedOption} value="optionOne" id="optionOne" />
+                <input type="radio" name="option" onChange={context.updateSelectedOption} value="optionOne" id="optionOne" defaultChecked />
                 <span className="fancy-radio" />
                 I'm having trouble with writing documents
                       </label>
