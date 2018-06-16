@@ -7,22 +7,19 @@ const PricingCard = props => {
       <div className="pricing-card--header">
         <div className="pricing-card--banner">
           <Banner>
-            <p>best value</p>
+            <p>{ props.bannerText }</p>
           </Banner>
         </div>
         <div className="pricing-card--corner-triangle"></div>
       </div>
       <div className="pricing-card--body">
-        <h3>One Time Upfront Payment</h3>
-        <h1>NGN 37, 350</h1>
+        <h3>{ props.title }</h3>
+        <h1>NGN { props.price }</h1>
 
-        <p>total</p>
+        <p>{ props.subTitle }</p>
 
         <div className="horizontal-rule"></div>
-        <p>
-          Complete your Nanodegree program in 8 months or less and save! 
-          The average completion time for this program is 8 months.
-        </p>
+        <p>{ props.description }</p>
       </div>
     </div>
   );

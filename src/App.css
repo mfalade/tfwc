@@ -148,11 +148,11 @@ h1 {
       content: "Step " counter(course-steps); }
   .course-steps-wrapper .radio-label {
     position: relative; }
-    .course-steps-wrapper .radio-label input[type="checkbox"] {
+    .course-steps-wrapper .radio-label input[type="radio"] {
       position: absolute;
       opacity: 0;
       z-index: -1; }
-      .course-steps-wrapper .radio-label input[type="checkbox"]:checked ~ .fancy-radio {
+      .course-steps-wrapper .radio-label input[type="radio"]:checked ~ .fancy-radio {
         background: #FC939B; }
     .course-steps-wrapper .radio-label .fancy-radio {
       width: 10px;
@@ -290,11 +290,9 @@ h1 {
   .course-sections .more-details.expanded {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    height: 60em;
+    min-height: 20em;
+    height: auto;
     transition: height 0.6s ease-in-out, opacity 0.4s ease-in-out 0.2s; }
-    @media (max-width: 576px) {
-      .course-sections .more-details.expanded {
-        height: 92em; } }
   .course-sections .more-details.collapsed {
     height: 0;
     transition: height 0.4s ease-in-out 0.1s, opacity 0.1s ease-in-out 0.3s; }

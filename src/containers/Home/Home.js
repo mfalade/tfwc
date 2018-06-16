@@ -8,6 +8,8 @@ import WhatYouWillLearn from '../../components/WhatYouWillLearn';
 import Faq from '../../components/Faq';
 import Footer from '../../components/Footer';
 
+import { CourseOptionProvider, CourseOptionContext } from '../../providers/courseOptions';
+
 export class HomeContainer extends React.Component {
   componentDidMount() {
     const header = document.getElementById("header");
@@ -23,18 +25,26 @@ export class HomeContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <Header />
-        <div className="container">
-          <HeroContent />
-          <MetaData />
-          <CourseSteps />
-          <CoursePricing />
-          <WhatYouWillLearn />
-          <Faq />
-          <Footer />
-        </div>
-      </div>
-    )
+      <CourseOptionProvider value="optionOne">
+        <CourseOptionContext.Consumer>
+          {context => {
+            return (
+              <div>
+                <Header />
+                <div className="container">
+                  <HeroContent />
+                  <MetaData />
+                  <CourseSteps context={context} />
+                  <CoursePricing />
+                  <WhatYouWillLearn context={context} />
+                  <Faq />
+                  <Footer />
+                </div>
+              </div>
+            )
+          }}
+        </CourseOptionContext.Consumer>
+      </CourseOptionProvider>
+    );
   }
 }

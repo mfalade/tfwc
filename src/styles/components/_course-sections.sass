@@ -75,11 +75,9 @@
         &.expanded
             border-top-left-radius: 0
             border-top-right-radius: 0
-            height: 60em
+            min-height: 20em
+            height: auto
             transition: height 0.6s ease-in-out, opacity 0.4s ease-in-out 0.2s
-
-            +respond-to("size-xs")
-                height: 92em
 
         &.collapsed
             // opacity: 0
