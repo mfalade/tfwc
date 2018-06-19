@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Banner from '../Banner';
-import { modules } from './modules';
+import { modules, moduleGoals } from './modules';
 
 class WhatYouWillLearn extends Component {
   state = {
     showMoreDetails: true,
-    courseModules: []
+    courseModules: [],
+    moduleGoal: {} 
   }
 
   componentDidMount() {
@@ -22,6 +23,7 @@ class WhatYouWillLearn extends Component {
     };
 
     this.setState({
+      moduleGoal: moduleGoals[selectedOption],
       courseModules: modulesMapping[selectedOption]
     });
   }
@@ -39,8 +41,17 @@ class WhatYouWillLearn extends Component {
     });
   }
 
+  getModuleSummary = () => {
+    const { moduleGoal } = this.state;
+    if (typeof moduleGoal.summary === 'function') {
+      return moduleGoal.summary;
+    }
+    return () => (<p> { moduleGoal.summary }</p>);
+  }
+
   render() {
-    const { showMoreDetails } = this.state;
+    const { showMoreDetails, moduleGoal, courseModules } = this.state;
+
     const parentClassNames = classnames({
       card: true,
       expanded: showMoreDetails,
@@ -54,6 +65,8 @@ class WhatYouWillLearn extends Component {
       collapsed: !showMoreDetails
     });
 
+    const ModuleSummary = this.getModuleSummary();
+
     return (
       <div className="course-sections">
         <h1 className="mtl mbm">What You Will Learn</h1>
@@ -66,18 +79,13 @@ class WhatYouWillLearn extends Component {
           </div>
           <div className="card-body two-halves">
             <div className="left-half-container">
-              <h2>Android Developer</h2>
-              <p>
-                We built this Nanodegree program in partnership with Google for students with
-                intermediate programming skills who want to become professional Android
-                developers. By the end of this program, you’ll have a diverse portfolio of projects to
-                show employers, including your own app on Google Play.
-                      </p>
+              <h2>{ moduleGoal.title }</h2>
+              { <ModuleSummary /> }
               <div className="card-cta">
                 <div className="left-half">
                   <p onClick={this.toggleMoreDetails}>{`SEE ${showMoreDetails ? 'LESS' : 'MORE'} DETAILS`}</p>
                 </div>
-                <p>5 Weeks to complete</p>
+                <p>{ moduleGoal.duration }</p>
               </div>
             </div>
             <div></div>
@@ -93,12 +101,12 @@ class WhatYouWillLearn extends Component {
                 <p>
                   You should have 1-2 years of experience programming in Java or another object-oriented
                   language like Python or C++, and must be proficient using Git and GitHub.
-                          </p>
+                </p>
 
-                <div className="course-sections">
+                <div className="course-sections fancy-list">
                   <ul>
                     {
-                      this.state.courseModules.map((moduleId, index) => {
+                      courseModules.map((moduleId, index) => {
                         const module = modules[moduleId];
                         return (
                           <React.Fragment key={index}>
