@@ -1,6 +1,18 @@
 import React from 'react';
+import { scroller } from 'react-scroll'
+
 
 const CourseSteps = ({ context }) => {
+  const handleOnChange = ev => {
+    context.updateSelectedOption(ev);
+    scroller.scrollTo('courseSections', {
+      duration: 1500,
+      delay: 200,
+      smooth: true,
+      offset: -140
+    });
+  }
+
   return (
     <div className="course-steps-wrapper">
       <ol className="course-steps">
@@ -19,28 +31,28 @@ const CourseSteps = ({ context }) => {
           <div>
             <div className="checkbox">
               <label className="radio-label" htmlFor="optionOne">
-                <input type="radio" name="option" onChange={context.updateSelectedOption} value="optionOne" id="optionOne" defaultChecked />
+                <input type="radio" name="option" onChange={handleOnChange} value="optionOne" id="optionOne" defaultChecked />
                 <span className="fancy-radio" />
                 I'm having trouble with writing documents
               </label>
             </div>
             <div className="checkbox">
               <label className="radio-label" htmlFor="optionTwo">
-                <input type="radio" name="option" onChange={context.updateSelectedOption} value="optionTwo" id="optionTwo" />
+                <input type="radio" name="option" onChange={handleOnChange} value="optionTwo" id="optionTwo" />
                 <span className="fancy-radio" />
                 I struggle to come up with new ideas
               </label>
             </div>
             <div className="checkbox">
               <label className="radio-label" htmlFor="optionThree">
-                <input type="radio" name="option" onChange={context.updateSelectedOption} value="optionThree" id="optionThree" />
+                <input type="radio" name="option" onChange={handleOnChange} value="optionThree" id="optionThree" />
                 <span className="fancy-radio" />
                 Where does good strategy come from?
               </label>
             </div>
             <div className="checkbox">
               <label className="radio-label" htmlFor="optionFour">
-                <input type="radio" name="option" onChange={context.updateSelectedOption} value="optionFour" id="optionFour" />
+                <input type="radio" name="option" onChange={handleOnChange} value="optionFour" id="optionFour" />
                 <span className="fancy-radio" />
                 This is all new to me, and I want to learn
               </label>

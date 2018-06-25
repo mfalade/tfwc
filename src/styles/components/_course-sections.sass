@@ -21,7 +21,6 @@
             margin-top: 2em
 
     .fancy-list > ul
-        padding-top: 3em
         list-style: none
         position: relative
 
@@ -30,7 +29,7 @@
             position: absolute
             width: 1px
             left: -15px
-            top: 60px
+            top: 15px
             bottom: 0
             opacity: .2
             background: $gray-dark
@@ -75,11 +74,15 @@
         &.expanded
             border-top-left-radius: 0
             border-top-right-radius: 0
-            min-height: 20em
-            height: auto
-            transition: height 0.6s ease-in-out, opacity 0.4s ease-in-out 0.2s
+            transition: height 0.6s ease-in-out
+
+            &[data-card-height='small']
+                height: 30em
+            
+            &[data-card-height='large']
+                height: 60em
+        
 
         &.collapsed
-            // opacity: 0
             height: 0
-            transition: height 0.4s ease-in-out 0.1s, opacity 0.1s ease-in-out 0.3s
+            transition: height 0.4s ease-in-out 0.1s

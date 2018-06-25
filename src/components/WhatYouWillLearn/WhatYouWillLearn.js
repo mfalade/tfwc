@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Element, animateScroll } from 'react-scroll';
 import classnames from 'classnames';
 import Banner from '../Banner';
 import { modules, moduleGoals } from './modules';
@@ -12,6 +13,7 @@ class WhatYouWillLearn extends Component {
 
   componentDidMount() {
     this.setModulesForSelectedOption('optionOne');
+    animateScroll.scrollToTop();
   }
 
   setModulesForSelectedOption = (selectedOption) => {
@@ -65,10 +67,13 @@ class WhatYouWillLearn extends Component {
       collapsed: !showMoreDetails
     });
 
+    const cardHeight = courseModules.length > 2  ? 'large' : 'small';
+
     const ModuleSummary = this.getModuleSummary();
 
     return (
       <div className="course-sections">
+        <Element name="courseSections"></Element>
         <h1 className="mtl mbm">What You Will Learn</h1>
 
         <div className={parentClassNames}>
@@ -92,17 +97,10 @@ class WhatYouWillLearn extends Component {
           </div>
         </div>
 
-        <div className={childClassNames}>
+        <div className={childClassNames} data-card-height={cardHeight}>
           <div className="card-body">
             <div className="wrapper course-summary">
               <div>
-                <h4 className="uppercase bold-5">Prerequisite Knowledge</h4>
-
-                <p>
-                  You should have 1-2 years of experience programming in Java or another object-oriented
-                  language like Python or C++, and must be proficient using Git and GitHub.
-                </p>
-
                 <div className="course-sections fancy-list">
                   <ul>
                     {

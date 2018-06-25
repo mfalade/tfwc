@@ -68,7 +68,8 @@ h1 {
     transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
-    transform: scale(0.8); }
+    transform: scale(0.8);
+    margin: 0; }
   .header.sticky {
     position: fixed;
     top: 0;
@@ -98,7 +99,7 @@ h1 {
   .meta-container--content {
     text-align: center;
     text-align: center;
-    padding: 1.5em 0;
+    padding: 1.5em;
     margin-top: 1em;
     margin-bottom: 1em; }
     @media (max-width: 576px) {
@@ -186,7 +187,7 @@ h1 {
         grid-template-columns: 1fr; } }
   .course-pricing .pricing-card {
     width: 21em;
-    height: 25em;
+    min-height: 25em;
     margin: auto;
     border-radius: 3px;
     box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
@@ -244,7 +245,6 @@ h1 {
     margin-top: 2em; }
 
 .course-sections .fancy-list > ul {
-  padding-top: 3em;
   list-style: none;
   position: relative; }
   .course-sections .fancy-list > ul:before {
@@ -252,7 +252,7 @@ h1 {
     position: absolute;
     width: 1px;
     left: -15px;
-    top: 60px;
+    top: 15px;
     bottom: 0;
     opacity: .2;
     background: #525c65;
@@ -290,12 +290,14 @@ h1 {
   .course-sections .more-details.expanded {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    min-height: 20em;
-    height: auto;
-    transition: height 0.6s ease-in-out, opacity 0.4s ease-in-out 0.2s; }
+    transition: height 0.6s ease-in-out; }
+    .course-sections .more-details.expanded[data-card-height='small'] {
+      height: 30em; }
+    .course-sections .more-details.expanded[data-card-height='large'] {
+      height: 60em; }
   .course-sections .more-details.collapsed {
     height: 0;
-    transition: height 0.4s ease-in-out 0.1s, opacity 0.1s ease-in-out 0.3s; }
+    transition: height 0.4s ease-in-out 0.1s; }
 
 .faq {
   padding: 2em; }
@@ -385,7 +387,11 @@ button {
   color: #FFF;
   font-size: .8em;
   border-radius: 3px;
-  background: rgba(255, 0, 0, 0.45); }
+  transition: all .1s ease-in-out;
+  background: rgba(255, 0, 0, 0.5);
+  cursor: pointer; }
+  button:hover {
+    box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
   button.lg {
     height: 3.5rem;
     width: 17.5rem;

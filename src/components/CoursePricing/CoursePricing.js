@@ -10,21 +10,21 @@ const CoursePricing = props => {
       title: 'One Time Upfront Payment', 
       subTitle: 'total', 
       price: '37,350', 
-      description: 'Complete your Nanodegree program in 8 months or less and save! The average completion time for this program is 8 months.' 
+      description: `Get access to all course material for 5 weeks upfront, and save more than 5%.`
     },
     { 
       bannerText: 'bundle value',
       title: 'Two Class Bundle', 
       subTitle: '/ two classes', 
       price: '14,940', 
-      description: 'Learn at your own pace, and manage your expenses monthly.' 
+      description: `Need only two classes? If you pick this bundle, it's cheaper than buying per class.`
     },
     { 
       bannerText: 'pay per class',
       title: 'Split Payments', 
       subTitle: '/ class', 
       price: '8,000', 
-      description: 'Learn at your own pace, and manage your expenses monthly.' 
+      description: `Want to test the waters class per class? Sure, we have something for you too.`
     }
   ];
   return (
