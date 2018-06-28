@@ -23,11 +23,13 @@
     grid-template-rows: repeat(20, 1fr)
 
     .background
+        box-shadow: $shadow-md
         background: linear-gradient(33deg, $theme-light, $theme-dark)
         grid-column: 1/15
         grid-row: 1/19
 
     .foreground
+        box-shadow: $shadow-md
         grid-column: 2/16
         grid-row: 3/22
         overflow: hidden
