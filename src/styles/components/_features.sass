@@ -1,0 +1,38 @@
+.features-container
+    margin-top: 7em
+    padding: 7em
+    background: #f5f5f5
+
+
+    .feature-row
+        display: grid
+        grid-template-columns: 1fr 1fr
+
+        &:not(:first-child)
+            margin-top: 7rem
+    
+        > div 
+            margin: auto
+
+
+.layered-cards
+    width: 360px
+    height: 250px
+    display: grid
+    grid-template-columns: repeat(15, 1fr)
+    grid-template-rows: repeat(20, 1fr)
+
+    .background
+        background: linear-gradient(33deg, $theme-light, $theme-dark)
+        grid-column: 1/15
+        grid-row: 1/19
+
+    .foreground
+        grid-column: 2/16
+        grid-row: 3/22
+        overflow: hidden
+        object-fit: cover
+        
+        img
+            width: 100%
+            object-fit: cover

@@ -72,55 +72,57 @@ class WhatYouWillLearn extends Component {
     const ModuleSummary = this.getModuleSummary();
 
     return (
-      <div className="course-sections">
-        <Element name="courseSections"></Element>
-        <h1 className="mtl mbm">What You Will Learn</h1>
+      <div className="section">
+        <div className="course-sections">
+          <Element name="courseSections"></Element>
+          <h1 className="mtl mbm">What You Will Learn</h1>
 
-        <div className={parentClassNames}>
-          <div className="card-header">
-            <Banner>
-              <p>Syllabus</p>
-            </Banner>
-          </div>
-          <div className="card-body two-halves">
-            <div className="left-half-container">
-              <h2>{ moduleGoal.title }</h2>
-              { <ModuleSummary /> }
-              <div className="card-cta">
-                <div className="left-half">
-                  <p onClick={this.toggleMoreDetails}>{`SEE ${showMoreDetails ? 'LESS' : 'MORE'} DETAILS`}</p>
-                </div>
-                <p>{ moduleGoal.duration }</p>
-              </div>
+          <div className={parentClassNames}>
+            <div className="card-header">
+              <Banner>
+                <p>Syllabus</p>
+              </Banner>
             </div>
-            <div></div>
-          </div>
-        </div>
-
-        <div className={childClassNames} data-card-height={cardHeight}>
-          <div className="card-body">
-            <div className="wrapper course-summary">
-              <div>
-                <div className="course-sections fancy-list">
-                  <ul>
-                    {
-                      courseModules.map((moduleId, index) => {
-                        const module = modules[moduleId];
-                        return (
-                          <React.Fragment key={index}>
-                            <li>
-                              <h4>{module.title}</h4>
-                              <p>{module.description}</p>
-                            </li>
-                          </React.Fragment>
-                        );
-                      })
-                    }
-                  </ul>
+            <div className="card-body two-halves">
+              <div className="left-half-container">
+                <h2>{ moduleGoal.title }</h2>
+                { <ModuleSummary /> }
+                <div className="card-cta">
+                  <div className="left-half">
+                    <p onClick={this.toggleMoreDetails}>{`SEE ${showMoreDetails ? 'LESS' : 'MORE'} DETAILS`}</p>
+                  </div>
+                  <p>{ moduleGoal.duration }</p>
                 </div>
               </div>
+              <div></div>
             </div>
-            <div></div>
+          </div>
+
+          <div className={childClassNames} data-card-height={cardHeight}>
+            <div className="card-body">
+              <div className="wrapper course-summary">
+                <div>
+                  <div className="course-sections fancy-list">
+                    <ul>
+                      {
+                        courseModules.map((moduleId, index) => {
+                          const module = modules[moduleId];
+                          return (
+                            <React.Fragment key={index}>
+                              <li>
+                                <h4>{module.title}</h4>
+                                <p>{module.description}</p>
+                              </li>
+                            </React.Fragment>
+                          );
+                        })
+                      }
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
