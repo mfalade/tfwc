@@ -190,7 +190,10 @@ h1 {
     min-height: 25em;
     margin: auto;
     border-radius: 3px;
-    box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
+    box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2);
+    transition: box-shadow .2s ease-in-out .1s; }
+    .course-pricing .pricing-card:hover {
+      box-shadow: 0px 5px 20px 3px rgba(40, 55, 70, 0.2); }
     @media (max-width: 576px) {
       .course-pricing .pricing-card {
         margin-bottom: 1.5em; } }
@@ -376,11 +379,11 @@ button {
   color: #FFF;
   font-size: .8em;
   border-radius: 3px;
-  transition: all .1s ease-in-out;
+  transition: all .2s ease-in-out .1s;
   background: rgba(255, 0, 0, 0.5);
   cursor: pointer; }
   button:hover {
-    box-shadow: 0px 1px 15px 0px rgba(40, 55, 70, 0.2); }
+    box-shadow: 0px 5px 20px 3px rgba(40, 55, 70, 0.2); }
   button.lg {
     height: 3.5rem;
     width: 17.5rem;
