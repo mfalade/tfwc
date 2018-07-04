@@ -16,9 +16,9 @@ import Reviews from '../../components/Reviews';
 export class HomeContainer extends React.Component {
   componentDidMount() {
     const header = document.getElementById("header");
-    const headerOffset = header.offsetTop + 1;
+
     window.onscroll = (ev) => {
-      if (window.pageYOffset >= headerOffset) {
+      if (window.pageYOffset >= 50) {
         header.classList.add("sticky");
       } else {
         header.classList.remove("sticky");
