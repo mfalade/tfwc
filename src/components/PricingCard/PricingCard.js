@@ -11,7 +11,6 @@ const PricingCard = props => {
             <p>{ props.bannerText }</p>
           </Banner>
         </div>
-        <div className="pricing-card--corner-triangle"></div>
       </div>
       <div className="pricing-card--body">
         <h3>{ props.title }</h3>
@@ -22,6 +21,8 @@ const PricingCard = props => {
         <div className="horizontal-rule"></div>
         <p>{ props.description }</p>
         <Button 
+          type="orange"
+          shadow="none"
           text="GET STARTED"
         />
         

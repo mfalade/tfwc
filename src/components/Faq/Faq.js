@@ -95,7 +95,7 @@ class Faq extends Component {
           <div className="vml text-center">
             <Button
               size="large"
-              type="button"
+              type="orange"
               text="GET STARTED NOW"
             />
           </div>

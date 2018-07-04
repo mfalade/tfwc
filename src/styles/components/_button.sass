@@ -8,12 +8,12 @@ button
   color: #FFF
   font-size: .8em
   border-radius: 3px
-  transition: all .2s ease-in-out .1s
+  transition: box-shadow .2s ease-in-out .1s
   background: $theme-dark
   cursor: pointer
 
   &:hover
-    box-shadow: $shadow-md
+    font-weight: 400
 
   &.lg
     height: 3.5rem
@@ -25,3 +25,28 @@ button
  
   &.btn-dark
     background: $theme-dark
+  
+  &.transparent
+    color: $theme-dark
+    font-weight: 500
+    background: white
+    transition: all .2s ease-in-out
+
+    &:hover
+      background: $theme-dark
+      color: white
+  
+  &.orange
+    color: white
+    font-weight: 500
+    background: $theme-orange
+    transition: all .2s ease-in-out
+
+    &:hover
+      border: 1px solid $theme-orange
+      background: white
+      color: $theme-orange
+  
+  &.no-shadow
+    &:hover
+     box-shadow: none

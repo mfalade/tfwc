@@ -10,7 +10,7 @@ const HeroContent = () => {
         <p>Elevate your career as a Product or Project Manager. Learn industry standard best practices for writing great scope documents, and secure more clients.</p>
         <br />
         <br />
-        <Button type="dark" text="find out how"></Button>
+        <Button type="orange" text="find out how"></Button>
       </div>
     </div>
   );

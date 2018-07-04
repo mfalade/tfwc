@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 32rem;
   border: 1px solid #eee;
   border-radius: 5px;
-  background: linear-gradient(33deg, #8C72E6, #512DE8), url("./assets/images/tfwc2.jpeg") no-repeat center center;
+  background: linear-gradient(33deg, #AA99E9, #512DE8), url("./assets/images/tfwc2.jpeg") no-repeat center center;
   background-size: cover;
   text-align: center;
   display: grid;
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
       opacity: 0;
       z-index: -1; }
       .course-steps-wrapper .radio-label input[type="radio"]:checked ~ .fancy-radio {
-        background: #512DE8; }
+        background: #FAB65B; }
     .course-steps-wrapper .radio-label .fancy-radio {
       width: 10px;
       height: 10px;
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        border: 1px solid #512DE8;
+        border: 1px solid #FAB65B;
         position: absolute;
         right: -3px;
         bottom: -3px; }
@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0.75em 0 0.75em; }
       .course-pricing .pricing-card--body .horizontal-rule {
         height: 2px;
-        background: #CBBBE6;
+        background: #8C72E6;
         margin: 1em 0.75em; }
     .course-pricing .pricing-card--header {
       height: 75px;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
       border-radius: 50%;
       width: 11px;
       height: 11px;
-      background: #512DE8;
+      background: #FAB65B;
       display: block; }
 
 .course-sections .course-summary {
@@ -392,11 +392,11 @@ button {
   color: #FFF;
   font-size: .8em;
   border-radius: 3px;
-  transition: all .2s ease-in-out .1s;
+  transition: box-shadow .2s ease-in-out .1s;
   background: #512DE8;
   cursor: pointer; }
   button:hover {
-    box-shadow: 1px 5px 20px 3px rgba(40, 55, 70, 0.2); }
+    font-weight: 400; }
   button.lg {
     height: 3.5rem;
     width: 17.5rem;
@@ -405,6 +405,25 @@ button {
     background: #AA99E9; }
   button.btn-dark {
     background: #512DE8; }
+  button.transparent {
+    color: #512DE8;
+    font-weight: 500;
+    background: white;
+    transition: all .2s ease-in-out; }
+    button.transparent:hover {
+      background: #512DE8;
+      color: white; }
+  button.orange {
+    color: white;
+    font-weight: 500;
+    background: #FAB65B;
+    transition: all .2s ease-in-out; }
+    button.orange:hover {
+      border: 1px solid #FAB65B;
+      background: white;
+      color: #FAB65B; }
+  button.no-shadow:hover {
+    box-shadow: none; }
 
 .card {
   background: #FFF;
