@@ -1,5 +1,4 @@
 import React from 'react';
-import featureImageOne from '../../assets/images/features-1.png';
 import featureImageTwo from '../../assets/images/features-2.png';
 
 const FeatureImage = props => {
