@@ -53,16 +53,14 @@ class Reviews extends Component {
       return review.stars + acc;
     }, 0);
 
-    
     const averageNumReviews = Math.round(totalNumReviews/ mockReviews.length);
-    console.log(totalNumReviews, 'total num reviews')
-    console.log(averageNumReviews, 'averageNumReviews')
+
     const ratingMapping = {
       1: { description: 'Horrible', emoji: '💩' },
       2: { description: 'Poor', emoji: '😞' },
       3: { description: 'Good', emoji: '👍' },
       4: { description: 'Great', emoji: '🙂' },
-      5: { description: 'Excellent', emoji: '😀' }
+      5: { description: 'Excellent', emoji: '😁' }
     };
     const review = ratingMapping[averageNumReviews];
   
@@ -88,8 +86,6 @@ class Reviews extends Component {
             <div className="fully-centered">  
                 <div>
                   <p className="cta mn" onClick={this.toggleReview}>Click to toggle ratings...</p>
-                  <br />
-                  <p>The emojis are experimental by the way. What would you prefer ?</p>
                 </div>
             </div>
           </div>
