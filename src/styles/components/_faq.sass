@@ -4,3 +4,11 @@
     h1
         @include respond-to('size-xs')
             margin-top: 2em
+
+    .more-questions
+        overflow: hidden
+        height: 0
+        transition: height .3s ease-in-out
+
+        &.expanded
+            height: 50em

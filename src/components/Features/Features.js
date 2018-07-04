@@ -20,48 +20,34 @@ const Features = props => {
     <div className="features-container">
       <div className="feature-row">
         <div>
-          <FeatureImage imageSource={featureImageOne} />
-        </div>
-        <div>
-          <div>
-            <h2>Code Review on All Your Projects</h2>
-            <p>
-              Receive personal, in-line code review from our network of expert reviewers for each of 
-              your projects, ensuring that you get the actionable feedback you need to make real progress.
-            </p>
-          </div>
-          <br />
-          <br />
-          <div>
-            <h2>Personalized Support and Mentorship</h2>
-            <p>
-              Learn with the support of mentors from the very beginning of the program, 
-              and join a rich community of learners on a dedicated forum.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="feature-row">
-        <div>
-          <div>
-            <h2>Code Review on All Your Projects</h2>
-            <p>
-              Receive personal, in-line code review from our network of expert reviewers for each of 
-              your projects, ensuring that you get the actionable feedback you need to make real progress.
-            </p>
-          </div>
-          <br />
-          <br />
-          <div>
-            <h2>Personalized Support and Mentorship</h2>
-            <p>
-              Learn with the support of mentors from the very beginning of the program, 
-              and join a rich community of learners on a dedicated forum.
-            </p>
-          </div>
-        </div>
-        <div>
           <FeatureImage imageSource={featureImageTwo} />
+        </div>
+        <div>
+          <div className="mll">
+            <div>
+              <h2>Personalized Support and Coaching</h2>
+              <p>
+                Receive optional personal one-on-one hour long coaching 
+                sessions after each lesson is completed
+              </p>
+            </div>
+            <br />
+            <div>
+              <h2>Free Templates, Documents and Materials</h2>
+              <p>
+                Each section has actionable material to help you practice 
+                and build your documentation. It is yours to keep forever
+              </p>
+            </div>
+            <br />
+            <div>
+              <h2>Learn from the Best</h2>
+              <p>
+                This program is built using expert material from industry 
+                eading best practices to teach you to excel at Product & Project Management
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

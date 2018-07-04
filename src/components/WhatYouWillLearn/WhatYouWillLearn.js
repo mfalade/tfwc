@@ -89,7 +89,7 @@ class WhatYouWillLearn extends Component {
                 { <ModuleSummary /> }
                 <div className="card-cta">
                   <div className="left-half">
-                    <p onClick={this.toggleMoreDetails}>{`SEE ${showMoreDetails ? 'LESS' : 'MORE'} DETAILS`}</p>
+                    <p onClick={this.toggleMoreDetails} className="cta">{`SEE ${showMoreDetails ? 'LESS' : 'MORE'} DETAILS`}</p>
                   </div>
                   <p>{ moduleGoal.duration }</p>
                 </div>

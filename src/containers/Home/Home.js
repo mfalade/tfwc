@@ -10,6 +10,7 @@ import CourseSteps from '../../components/CourseSteps/CourseSteps';
 import CoursePricing from '../../components/CoursePricing/CoursePricing';
 
 import { CourseOptionProvider, CourseOptionContext } from '../../providers/courseOptions';
+import { Organizers } from '../../components/Organizers/Organizers';
 
 export class HomeContainer extends React.Component {
   componentDidMount() {
@@ -39,6 +40,7 @@ export class HomeContainer extends React.Component {
                   <CoursePricing />
                   <WhatYouWillLearn context={context} />
                   <Features />
+                  <Organizers />
                   <Faq />
                   <Footer />
                 </div>
