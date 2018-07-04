@@ -16,7 +16,7 @@ class Faq extends Component {
     return (
       <div className="section">
         <div className="faq">
-          <h1 className="mtl">FAQ</h1>
+          <h1>FAQ</h1>
 
           <h2 className="mtm bold-4">How do I know if this course is right for me?</h2>
           <p>

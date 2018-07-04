@@ -12,7 +12,7 @@ export const Organizers = props => (
       <div className="profile-holder">
         <h3 className="bold-5">Karen Adie</h3>
         <p>
-          Karen Adie is a technology professional with an entrepreneurial mind-set, 
+          Karen is a technology professional with an entrepreneurial mind-set, 
           who is obsessed with building and managing products (& people) that can do the extraordinary.
         </p>
         <p> 

@@ -1,0 +1,36 @@
+.reviews-container
+    margin-top: 6em
+    padding: 6em
+
+.review-cards-holder
+    margin-top: 5em
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+
+    .review-summary
+        text-align: center
+        display: grid
+        align-items: center
+
+.review-card
+    padding: 2em
+    background: white
+    box-shadow: $shadow-sm
+
+.fa-star
+    font-size: 12px
+    color: #b5b5b5
+    padding-right: 2px
+
+    &.checked
+        color: gold
+    
+    &.large
+        font-size: 22px
+        padding-right: 5px
+
+.extra-large
+    font-size: 70px
+    margin-bottom: .5em
