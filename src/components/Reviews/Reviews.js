@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import classnames from 'classnames';
 
 const Ratings = props => {
   const numChecked = props.stars;
@@ -7,11 +8,11 @@ const Ratings = props => {
     <div>
       {
         Array.from({ length: 5 }).map((item, i) => {
-          const className = `
-            fa fa-star
-            ${ i < numChecked ? 'checked' : '' }
-            ${props.type === 'large' ? 'large' : '' }
-          `;
+          const className = classnames({
+            'fa fa-star': true,
+            checked: i < numChecked,
+            large: props.type === 'large'
+          });
           return <span key={i} className={className}></span>
         })
       }

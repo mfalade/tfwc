@@ -6,7 +6,9 @@ const Button = (props) => {
     button: true,
     lg: props.size === 'large',
     sm: props.size === 'small',
-    md: props.size === 'medium'
+    md: props.size === 'medium',
+    'btn-light': props.type === 'light',
+    'btn-dark': props.type === 'dark',
   });
 
   return (
