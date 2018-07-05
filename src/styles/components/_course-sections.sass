@@ -68,9 +68,12 @@
         +respond-to("size-xs")
             grid-template-columns: 1fr
 
+            .cta-container
+                text-align: center
+
             &.expanded
                 &[data-card-height='small']
-                    height: 50em !important
+                    height: 55em !important
                 
                 &[data-card-height='large']
                     height: 115em !important

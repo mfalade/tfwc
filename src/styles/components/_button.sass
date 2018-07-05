@@ -8,11 +8,14 @@ button
   color: #FFF
   font-size: .8em
   border-radius: 3px
-  transition: box-shadow .2s ease-in-out .1s
+  transition: all .2s ease-in-out
   background: $theme-orange
   cursor: pointer
 
   &:hover
+    border: 1px solid $theme-orange
+    background: white
+    color: $theme-orange
     font-weight: 400
 
   &.lg
@@ -29,14 +32,3 @@ button
   &.white-border
     &:hover
       border: 1px solid white
-  
-  &.orange
-    color: white
-    font-weight: 500
-    background: $theme-orange
-    transition: all .2s ease-in-out
-
-    &:hover
-      border: 1px solid $theme-orange
-      background: white
-      color: $theme-orange

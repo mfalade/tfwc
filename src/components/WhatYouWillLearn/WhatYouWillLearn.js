@@ -50,7 +50,7 @@ const WhatYouWillLearn = props => {
                     }
                   </ul>
                 </div>
-                <div>
+                <div className="cta-container">
                   <Button className="mtl" text="get started" onClick={goToPayment} />
                 </div>
               </div>

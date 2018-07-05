@@ -312,8 +312,10 @@ h1, h2, h3, h4, h5, h6 {
   @media (max-width: 576px) {
     .course-sections .more-details {
       grid-template-columns: 1fr; }
+      .course-sections .more-details .cta-container {
+        text-align: center; }
       .course-sections .more-details.expanded[data-card-height='small'] {
-        height: 50em !important; }
+        height: 55em !important; }
       .course-sections .more-details.expanded[data-card-height='large'] {
         height: 115em !important; } }
   .course-sections .more-details.expanded {
@@ -434,10 +436,13 @@ button {
   color: #FFF;
   font-size: .8em;
   border-radius: 3px;
-  transition: box-shadow .2s ease-in-out .1s;
+  transition: all .2s ease-in-out;
   background: #FAB65B;
   cursor: pointer; }
   button:hover {
+    border: 1px solid #FAB65B;
+    background: white;
+    color: #FAB65B;
     font-weight: 400; }
   button.lg {
     height: 3.5rem;
@@ -449,15 +454,6 @@ button {
     background: #512DE8; }
   button.white-border:hover {
     border: 1px solid white; }
-  button.orange {
-    color: white;
-    font-weight: 500;
-    background: #FAB65B;
-    transition: all .2s ease-in-out; }
-    button.orange:hover {
-      border: 1px solid #FAB65B;
-      background: white;
-      color: #FAB65B; }
 
 .card {
   background: #FFF;
