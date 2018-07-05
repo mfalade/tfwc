@@ -2,12 +2,23 @@
     margin-top: 6em
     padding: 6em
 
+    @include respond-to('size-xs')
+        margin-top: 4em
+        padding: 2em
+
+.review-title-holder
+    @include respond-to('size-xs')
+        text-align: center
+
 .review-cards-holder
     margin-top: 5em
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-column-gap: 20px
     grid-row-gap: 20px
+
+    @include respond-to('size-xs')
+        grid-template-columns: 1fr
 
     .review-summary
         text-align: center
@@ -18,6 +29,9 @@
     padding: 2em
     background: white
     box-shadow: $shadow-sm
+
+    @include respond-to('size-xs')
+        padding: 1em
 
 .fa-star
     font-size: 12px

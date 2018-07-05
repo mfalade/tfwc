@@ -91,3 +91,16 @@
   color: $theme-dark
   &.orange
     color: $theme-orange
+
+ul.custom-sytle
+  margin-left: 2em
+  list-style: none
+
+  @include respond-to('size-xs')
+    margin-left: 1em
+
+  li
+    background: url('assets/images/list-item.png') no-repeat 0 0
+    padding-left: 30px
+    color: $gray-dark
+    margin-bottom: 1em

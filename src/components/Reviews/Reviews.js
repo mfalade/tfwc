@@ -68,7 +68,9 @@ class Reviews extends Component {
     return (
       <div className="reviews-container gray-bg">
         <div>
-          <h1>Student Reviews</h1>
+          <div className="review-title-holder">
+            <h1>Student Reviews</h1>
+          </div>
           <div className="review-cards-holder">
             <div className="review-summary">
               <div>

@@ -5,6 +5,9 @@
     text-align: center
     justify-content: center
 
+    @include respond-to('size-xs')
+        margin-top: 4em
+
 
 .organizer-card
     margin-top: 3em
@@ -14,6 +17,9 @@
     border-top: 5px solid $theme-dark
     border-top-right-radius: 5px
     border-top-left-radius: 5px
+
+    @include respond-to('size-xs')
+        max-width: 250px
 
     .profile-holder
         padding: 4em 0

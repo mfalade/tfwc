@@ -48,6 +48,9 @@
         display: grid
         grid-template-columns: 4fr 1fr
 
+        +respond-to("size-xs")
+            grid-template-columns: 1fr
+
     .more-details
         height: 0
         overflow: hidden
@@ -57,6 +60,17 @@
 
             +respond-to("size-xs")
                 padding: 2em
+        
+        +respond-to("size-xs")
+            grid-template-columns: 1fr
+
+            &.expanded
+                &[data-card-height='small']
+                    height: 50em !important
+                
+                &[data-card-height='large']
+                    height: 115em !important
+        
 
         &.expanded
             border-top-left-radius: 0

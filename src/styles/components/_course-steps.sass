@@ -6,7 +6,7 @@
   @include respond-to('size-xs')
      margin-left: 0
      margin-right: 0
-     padding: 0 1.2em
+     padding: 0
      grid-template-columns: 1fr
 
   .left-half-container
@@ -46,6 +46,12 @@
       margin-bottom: 2em
       counter-increment: course-steps
       content: 'Step ' counter(course-steps)
+
+  li.non-full-width
+    width: 75%
+
+    @include respond-to('size-xs')
+        width: 100%
 
   .radio-label
     position: relative

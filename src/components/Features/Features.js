@@ -22,7 +22,7 @@ const Features = props => {
           <FeatureImage imageSource={featureImageTwo} />
         </div>
         <div>
-          <div className="mll">
+          <div className="feature-row--text">
             <div>
               <h2>Personalized Support and Coaching</h2>
               <p>

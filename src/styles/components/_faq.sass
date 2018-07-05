@@ -2,9 +2,9 @@
     margin-top: 6em
     padding: 2em
 
-    h1
-        @include respond-to('size-xs')
-            margin-top: 2em
+    @include respond-to('size-xs')
+        margin-top: 4em
+        padding: 0
 
     .more-questions
         overflow: hidden
@@ -13,3 +13,6 @@
 
         &.expanded
             height: 50em
+
+            @include respond-to('size-xs')
+                height: 80em
