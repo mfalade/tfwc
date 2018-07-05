@@ -453,7 +453,9 @@ button {
   button.btn-dark {
     background: #512DE8; }
   button.white-border:hover {
-    border: 1px solid white; }
+    background: #FAB65B;
+    border: 1px solid white;
+    color: #FFF; }
 
 .card {
   background: #FFF;
