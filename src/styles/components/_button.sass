@@ -9,7 +9,7 @@ button
   font-size: .8em
   border-radius: 3px
   transition: box-shadow .2s ease-in-out .1s
-  background: $theme-dark
+  background: $theme-orange
   cursor: pointer
 
   &:hover
@@ -26,15 +26,9 @@ button
   &.btn-dark
     background: $theme-dark
   
-  &.transparent
-    color: $theme-dark
-    font-weight: 500
-    background: white
-    transition: all .2s ease-in-out
-
+  &.white-border
     &:hover
-      background: $theme-dark
-      color: white
+      border: 1px solid white
   
   &.orange
     color: white
@@ -46,7 +40,3 @@ button
       border: 1px solid $theme-orange
       background: white
       color: $theme-orange
-  
-  &.no-shadow
-    &:hover
-     box-shadow: none

@@ -84,11 +84,6 @@ class Reviews extends Component {
                 </Fragment>);
               })
             }
-            <div className="fully-centered">  
-                <div>
-                  <p className="cta mn" onClick={this.toggleReview}>Click to toggle ratings...</p>
-                </div>
-            </div>
           </div>
         </div>
       </div>

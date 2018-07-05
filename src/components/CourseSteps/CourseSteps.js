@@ -1,8 +1,12 @@
 import React from 'react';
-import { scroller } from 'react-scroll'
+import { scroller, Element } from 'react-scroll';
+import Banner from '../Banner';
 
 
 const CourseSteps = ({ context }) => {
+  const moduleGoal = context.moduleGoal;
+  const ModuleSummary = context.moduleSummary;
+
   const handleOnChange = ev => {
     context.updateSelectedOption(ev);
     scroller.scrollTo('courseSections', {
@@ -16,6 +20,7 @@ const CourseSteps = ({ context }) => {
   return (
     <div className="section">
       <div className="course-steps-wrapper">
+        <Element name="courseSteps"></Element>
         <ol className="course-steps">
           <li>
             <p>
@@ -62,9 +67,30 @@ const CourseSteps = ({ context }) => {
 
           </li>
           <li>
+            <Element name="courseSections"></Element>
             <p>
               Great! So, it looks like we have something for you. Based on what you selected, here's how we can help
             </p>
+            <br />
+            <div className="card">
+            <div className="card-header">
+              <Banner>
+                <p>Syllabus</p>
+              </Banner>
+            </div>
+            <div className="card-body two-halves">
+              <div className="left-half-container">
+                <h2>{ moduleGoal.title }</h2>
+                { <ModuleSummary /> }
+                <div className="card-cta">
+                  <div className="left-half">
+                    <h3 className="hightlight orange">{ moduleGoal.duration }</h3>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
           </li>
           <li>
             <p>

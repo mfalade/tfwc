@@ -50,7 +50,7 @@ export const moduleGoals = {
       <div>
         <p>Whether you are starting off or a seasoned expert, you will elevate your product & project management knowledge with this full-fledged course.
         Come as you are and leave with:</p>
-        <ul className="description-items">
+        <ul className="description-items custom-sytle">
           <li>Product documentation templates worth N1m</li>
           <li>Idea generation techniques used by the likes of Amazon and Nike</li>
           <li>End-to-end knowledge of how to solidify your client base and guarantee their success</li>

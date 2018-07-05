@@ -1,7 +1,17 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 import { Button }from '../FormElements';
 
 const HeroContent = () => {
+  const handleClick = () => {
+    scroller.scrollTo('courseSteps', {
+      duration: 1500,
+      delay: 200,
+      smooth: true,
+      offset: -140
+    });
+  };
+
   return (
     <div className="hero-wrapper section">
       <div className="hero-content">
@@ -10,7 +20,7 @@ const HeroContent = () => {
         <p>Elevate your career as a Product or Project Manager. Learn industry standard best practices for writing great scope documents, and secure more clients.</p>
         <br />
         <br />
-        <Button type="orange" text="find out how"></Button>
+        <Button type="white-border" text="find out how" onClick={handleClick}></Button>
       </div>
     </div>
   );

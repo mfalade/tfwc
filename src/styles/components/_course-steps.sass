@@ -1,17 +1,32 @@
 .course-steps-wrapper
   margin-left: 75px
+  margin-right: 75px
   display: grid
-  grid-template-columns: 55%
 
   @include respond-to('size-xs')
      margin-left: 0
+     margin-right: 0
      padding: 0 1.2em
      grid-template-columns: 1fr
+
+  .left-half-container
+    padding: 2em 4em
+
+    +respond-to("size-xs")
+      padding: 3em 2em
+
+
+    .card-cta
+      display: flex
+      justify-content: space-between
+      border-top: 1px solid $gray
+      padding-top: 1em
+      margin-top: 2em
 
   ol
     counter-reset: course-steps
 
-    li  
+    > li
       list-style-type: none
       padding: 3.5em 0
 
@@ -25,7 +40,7 @@
       .checkbox
         margin-bottom: 30px
       
-    li::before
+    > li::before
       font-weight: 200
       font-size: 2.5rem
       margin-bottom: 2em

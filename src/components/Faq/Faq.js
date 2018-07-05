@@ -23,7 +23,7 @@ class Faq extends Component {
             If you fit into any of the following profiles then this is for you:
         </p>
           <p className="vmm">Please see the Overview Page for more information.</p>
-          <ul>
+          <ul className="custom-sytle">
             <li>
               I am an experienced product or project manager looking to elevate my skills
               and take the next step in my career.

@@ -7,10 +7,9 @@ const Button = (props) => {
     lg: props.size === 'large',
     sm: props.size === 'small',
     md: props.size === 'medium',
-    'no-shadow': props.shadow === 'none',
     'btn-light': props.type === 'light',
     'btn-dark': props.type === 'dark',
-    transparent: props.type === 'transparent',
+    'white-border': props.type === 'white-border',
     orange: props.type === 'orange',
   });
 

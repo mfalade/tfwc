@@ -22,6 +22,15 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200; }
 
+ul.custom-sytle {
+  margin-left: 2em;
+  list-style: none; }
+  ul.custom-sytle li {
+    background: url("assets/images/list-item.png") no-repeat 0 0;
+    padding-left: 30px;
+    color: #525c65;
+    margin-bottom: 1em; }
+
 .section {
   margin: 0 5rem; }
   @media (max-width: 576px) {
@@ -125,27 +134,39 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-steps-wrapper {
   margin-left: 75px;
-  display: grid;
-  grid-template-columns: 55%; }
+  margin-right: 75px;
+  display: grid; }
   @media (max-width: 576px) {
     .course-steps-wrapper {
       margin-left: 0;
+      margin-right: 0;
       padding: 0 1.2em;
       grid-template-columns: 1fr; } }
+  .course-steps-wrapper .left-half-container {
+    padding: 2em 4em; }
+    @media (max-width: 576px) {
+      .course-steps-wrapper .left-half-container {
+        padding: 3em 2em; } }
+    .course-steps-wrapper .left-half-container .card-cta {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #eee;
+      padding-top: 1em;
+      margin-top: 2em; }
   .course-steps-wrapper ol {
     counter-reset: course-steps; }
-    .course-steps-wrapper ol li {
+    .course-steps-wrapper ol > li {
       list-style-type: none;
       padding: 3.5em 0; }
       @media (max-width: 576px) {
-        .course-steps-wrapper ol li {
+        .course-steps-wrapper ol > li {
           padding: 1.5em 0; } }
-      .course-steps-wrapper ol li p {
+      .course-steps-wrapper ol > li p {
         padding-top: 1em;
         line-height: 2rem; }
-      .course-steps-wrapper ol li .checkbox {
+      .course-steps-wrapper ol > li .checkbox {
         margin-bottom: 30px; }
-    .course-steps-wrapper ol li::before {
+    .course-steps-wrapper ol > li::before {
       font-weight: 200;
       font-size: 2.5rem;
       margin-bottom: 2em;
@@ -239,21 +260,10 @@ h1, h2, h3, h4, h5, h6 {
     .course-sections .two-halves {
       grid-template-columns: 1fr; } }
 
-.course-sections .left-half-container {
-  padding: 2em 4em; }
-  @media (max-width: 576px) {
-    .course-sections .left-half-container {
-      padding: 3em 2em; } }
-  .course-sections .left-half-container .card-cta {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #eee;
-    padding-top: 1em;
-    margin-top: 2em; }
-
 .course-sections .fancy-list > ul {
   list-style: none;
-  position: relative; }
+  position: relative;
+  margin-left: 0; }
   .course-sections .fancy-list > ul:before {
     content: '';
     position: absolute;
@@ -368,7 +378,8 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-weight: 500;
     font-size: .87em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-top: 1px !important; }
   .banner .banner-triangle {
     position: absolute;
     background: white;
@@ -391,7 +402,7 @@ button {
   font-size: .8em;
   border-radius: 3px;
   transition: box-shadow .2s ease-in-out .1s;
-  background: #512DE8;
+  background: #FAB65B;
   cursor: pointer; }
   button:hover {
     font-weight: 400; }
@@ -403,14 +414,8 @@ button {
     background: #AA99E9; }
   button.btn-dark {
     background: #512DE8; }
-  button.transparent {
-    color: #512DE8;
-    font-weight: 500;
-    background: white;
-    transition: all .2s ease-in-out; }
-    button.transparent:hover {
-      background: #512DE8;
-      color: white; }
+  button.white-border:hover {
+    border: 1px solid white; }
   button.orange {
     color: white;
     font-weight: 500;
@@ -420,8 +425,6 @@ button {
       border: 1px solid #FAB65B;
       background: white;
       color: #FAB65B; }
-  button.no-shadow:hover {
-    box-shadow: none; }
 
 .card {
   background: #FFF;
@@ -586,6 +589,12 @@ button {
   display: grid;
   justify-content: center;
   align-content: center; }
+
+.hightlight {
+  font-weight: 400;
+  color: #512DE8; }
+  .hightlight.orange {
+    color: #FAB65B; }
 
 .footer {
   padding: 4em;
