@@ -10,10 +10,10 @@ const CourseSteps = ({ context }) => {
   const handleOnChange = ev => {
     context.updateSelectedOption(ev);
     scroller.scrollTo('courseSections', {
-      duration: 1500,
-      delay: 200,
+      duration: 1200,
+      delay: 120,
       smooth: true,
-      offset: -140
+      offset: -160
     });
   }
 

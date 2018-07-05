@@ -5,10 +5,10 @@ import { Button }from '../FormElements';
 const HeroContent = () => {
   const handleClick = () => {
     scroller.scrollTo('courseSteps', {
-      duration: 1500,
-      delay: 200,
+      duration: 1200,
+      delay: 120,
       smooth: true,
-      offset: -140
+      offset: -100
     });
   };
 
@@ -20,7 +20,7 @@ const HeroContent = () => {
         <p>Elevate your career as a Product or Project Manager. Learn industry standard best practices for writing great scope documents, and secure more clients.</p>
         <br />
         <br />
-        <Button type="white-border" text="find out how" onClick={handleClick}></Button>
+        <Button type="white-border" text="find out how" onClick={handleClick} />
       </div>
     </div>
   );

@@ -289,7 +289,7 @@ ul.custom-sytle {
       border-radius: 50%;
       width: 11px;
       height: 11px;
-      background: #FAB65B;
+      background: #512DE8;
       display: block; }
 
 .course-sections .course-summary {
@@ -309,9 +309,9 @@ ul.custom-sytle {
     border-top-right-radius: 0;
     transition: height 0.6s ease-in-out; }
     .course-sections .more-details.expanded[data-card-height='small'] {
-      height: 30em; }
+      height: 35em; }
     .course-sections .more-details.expanded[data-card-height='large'] {
-      height: 60em; }
+      height: 70em; }
   .course-sections .more-details.collapsed {
     height: 0;
     transition: height 0.4s ease-in-out 0.1s; }

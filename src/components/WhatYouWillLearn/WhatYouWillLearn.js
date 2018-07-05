@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { modules } from '../../providers/modules';
+import { Button }from '../FormElements';
 
 class WhatYouWillLearn extends Component {
 
   render() {
     const { courseModules } = this.props.context;
-    console.log(this.props.context, '......')
 
     const childClassNames = classnames({
       card: true,
@@ -15,7 +15,6 @@ class WhatYouWillLearn extends Component {
     });
 
     const cardHeight = courseModules.length > 2  ? 'large' : 'small';
-
 
     return (
       <div className="section">
@@ -42,6 +41,9 @@ class WhatYouWillLearn extends Component {
                         })
                       }
                     </ul>
+                  </div>
+                  <div>
+                    <Button className="mtl" text="get started"/>
                   </div>
                 </div>
               </div>
