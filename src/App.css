@@ -21,6 +21,9 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200; }
+  @media (max-width: 576px) {
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 2.5rem; } }
 
 .section {
   margin: 0 5rem; }
@@ -60,9 +63,6 @@ h1, h2, h3, h4, h5, h6 {
     .hero-wrapper .hero-content h1 {
       margin-top: 2.3rem;
       margin-bottom: 2.3rem; }
-      @media (max-width: 576px) {
-        .hero-wrapper .hero-content h1 {
-          line-height: 2.5rem; } }
 
 .header {
   background: #FFF;
@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
       height: 50em; }
       @media (max-width: 576px) {
         .faq .more-questions.expanded {
-          height: 85em; } }
+          height: 90em; } }
 
 .features-container {
   margin-top: 7em;
