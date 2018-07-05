@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
       .course-pricing-wrapper {
         grid-template-columns: 1fr; } }
   .course-pricing .pricing-card {
-    width: 21em;
+    max-width: 21em;
     min-height: 25em;
     margin: auto;
     border-radius: 3px;
@@ -272,6 +272,9 @@ h1, h2, h3, h4, h5, h6 {
     opacity: .2;
     background: #525c65;
     display: block; }
+    @media (max-width: 576px) {
+      .course-sections .fancy-list > ul:before {
+        display: none; } }
   .course-sections .fancy-list > ul li {
     padding: 3em 0 0;
     position: relative; }
@@ -339,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
       height: 50em; }
       @media (max-width: 576px) {
         .faq .more-questions.expanded {
-          height: 80em; } }
+          height: 85em; } }
 
 .features-container {
   margin-top: 7em;
@@ -612,6 +615,10 @@ button {
   font-weight: 500;
   color: #512DE8;
   font-size: .8em; }
+  .cta.orange {
+    color: #FAB65B; }
+  .cta.large {
+    font-size: 1em; }
 
 .bold-1 {
   font-weight: 100; }

@@ -16,12 +16,21 @@ const CourseSteps = ({ context }) => {
       offset: -160
     });
   }
+  
+  const goToLessons = ev => {
+    scroller.scrollTo('courseLessons', {
+      duration: 1200,
+      delay: 120,
+      smooth: true,
+      offset: -160
+    });
+  }
 
   return (
     <div>
       <div className="section">
         <div className="course-steps-wrapper">
-          <Element name="courseSteps"></Element>
+          <Element name="courseSteps" />
           <ol className="course-steps">
             <li className="non-full-width">
               <p>
@@ -68,7 +77,7 @@ const CourseSteps = ({ context }) => {
 
             </li>
             <li>
-              <Element name="courseSections"></Element>
+              <Element name="courseSections" />
               <p>
                 Great! So, it looks like we have something for you. Based on what you selected, here's how we can help
               </p>
@@ -85,11 +94,13 @@ const CourseSteps = ({ context }) => {
                   { <ModuleSummary /> }
                   <div className="card-cta">
                     <div className="left-half">
-                      <h3 className="hightlight orange">{ moduleGoal.duration }</h3>
+                      <h3>{ moduleGoal.duration }</h3>
+                    </div>
+                    <div>
+                      <h3 className="cta large orange" onClick={goToLessons}>View Lessons</h3>
                     </div>
                   </div>
                 </div>
-                <div></div>
               </div>
             </div>
             </li>

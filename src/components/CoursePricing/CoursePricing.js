@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 import PricingCard from '../PricingCard';
 
@@ -29,6 +30,7 @@ const CoursePricing = props => {
   return (
     <div className="section">
       <div className="course-pricing">
+        <Element name="paymentSection" />
         <h1>Get Started Now</h1>
 
         <div className="course-pricing-wrapper">
