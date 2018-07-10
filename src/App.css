@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 80px;
     width: 40px; }
 
-button {
+button, .btn {
   height: 2.75rem;
   width: 13rem;
   font-weight: 100;
@@ -435,23 +435,28 @@ button {
   transition: all .2s ease-in-out;
   background: #FAB65B;
   cursor: pointer; }
-  button:hover {
+  button:hover, .btn:hover {
     border: 1px solid #FAB65B;
     background: white;
     color: #FAB65B;
     font-weight: 400; }
-  button.lg {
+  button.lg, .btn.lg {
     height: 3.5rem;
     width: 17.5rem;
     font-size: 1em; }
-  button.btn-light {
+  button.btn-light, .btn.btn-light {
     background: #AA99E9; }
-  button.btn-dark {
+  button.btn-dark, .btn.btn-dark {
     background: #512DE8; }
-  button.white-border:hover {
+  button.white-border:hover, .btn.white-border:hover {
     background: #FAB65B;
     border: 1px solid white;
     color: #FFF; }
+
+.btn {
+  text-decoration: none;
+  padding: .75rem 2.75rem;
+  font-weight: 400; }
 
 .card {
   background: #FFF;
@@ -602,6 +607,12 @@ button {
   width: 100%;
   text-align: center; }
 
+.orange-text {
+  color: #FAB65B; }
+
+.purple-text {
+  color: #512DE8; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -614,6 +625,15 @@ button {
     color: #FAB65B; }
   .cta.large {
     font-size: 1em; }
+
+.pointer {
+  cursor: pointer; }
+
+.link-text {
+  transition: color .2s ease-in-out; }
+
+.link-text:hover {
+  color: #512DE8; }
 
 .bold-1 {
   font-weight: 100; }

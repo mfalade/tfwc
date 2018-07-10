@@ -1,7 +1,17 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 
 
 const MetaData = (props) => {
+  const scrollToReviews = () => {
+    scroller.scrollTo('studentReviews', {
+      duration: 1200,
+      delay: 120,
+      smooth: true,
+      offset: -175
+    });
+  };
+
   return (
     <div className="section">
       <div className="meta-container">
@@ -21,7 +31,7 @@ const MetaData = (props) => {
         <div className="meta-container--content">
           <h5>Student Rating</h5>
           <h3 className="empty-cell">&nbsp;</h3>
-          <p>View all reviews (2353)</p>        
+          <p className="pointer link-text bold-4" onClick={scrollToReviews}>View all reviews (4)</p>        
         </div>
         
         <div className="meta-container--content">

@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from '../Banner';
-import { Button } from '../FormElements';
 
 const PricingCard = props => {
   return (
@@ -20,12 +19,16 @@ const PricingCard = props => {
 
         <div className="horizontal-rule"></div>
         <p>{ props.description }</p>
-        <Button 
-          type="orange"
-          shadow="none"
-          text="GET STARTED"
-        />
-        
+        <div className="vmm">
+          <a 
+            className="btn btn-orange"
+            shadow="none"
+            href={props.paymentUrl}
+            target="_blank"
+          >
+            GET STARTED
+          </a>
+        </div>
       </div>
     </div>
   );

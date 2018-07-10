@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
+import { Element } from 'react-scroll';
 
 const Ratings = props => {
   const numChecked = props.stars;
@@ -30,31 +31,31 @@ const ReviewCard = props => (
 
 class Reviews extends Component {
   state = {
-    mockReviews: [
-      { user: 'Hassan J.', comment: 'Wonderful details of every thing and go up stairs', stars: 4 },
-      { user: 'Huroye S.', comment: 'excellent', stars: 5 },
-      { user: 'Rick H.', comment: 'Not bad', stars: 3 },
-      { user: 'Bran Q.', comment: 'Great work Karen 👍', stars: 5 },
+    studentReviews: [
+      { user: 'Ngozi O.', comment: `Very well detailed. Loved the materials that I got, because I am still using them for all my clients.`, stars: 5 },
+      { user: 'Chijioke N.', comment: `I had a great experience with Karen, especially during the coaching sessions. She makes things so easy for every level, so it's useful for anyone in the PM fields.`, stars: 5 },
+      { user: 'Muhammad M.', comment: 'The course material is of a great quality! Really wish this was video courses, because would love to rewatch them again.', stars: 4 },
+      { user: 'Eghosa N.', comment: `Great job, Karen! Learnt a lot more than I actually thought I would, and it was fantastic value for money. Would definitely recommend.`, stars: 5 },
     ]
   }
 
   toggleReview = () => {
-    const newMockReview = this.state.mockReviews.map(review => {
+    const newMockReview = this.state.studentReviews.map(review => {
       return {
         ...review,
         stars: Math.ceil(Math.random() * 5)
       }
     });
-    this.setState({ mockReviews: newMockReview });
+    this.setState({ studentReviews: newMockReview });
   }
 
   render () {
-    const { mockReviews } = this.state;
-    const totalNumReviews = mockReviews.reduce((acc, review) => {
+    const { studentReviews } = this.state;
+    const totalNumReviews = studentReviews.reduce((acc, review) => {
       return review.stars + acc;
     }, 0);
 
-    const averageNumReviews = Math.round(totalNumReviews/ mockReviews.length);
+    const averageNumReviews = Math.round(totalNumReviews/ studentReviews.length);
 
     const ratingMapping = {
       1: { description: 'Horrible', emoji: '💩' },
@@ -67,6 +68,7 @@ class Reviews extends Component {
   
     return (
       <div className="reviews-container gray-bg">
+        <Element name="studentReviews" />
         <div>
           <div className="review-title-holder">
             <h1>Student Reviews</h1>
@@ -80,7 +82,7 @@ class Reviews extends Component {
               </div>
             </div>
             {
-              mockReviews.map((review, index) => {
+              studentReviews.map((review, index) => {
                 return (<Fragment key={index}>
                   <ReviewCard {...review} />
                 </Fragment>);
