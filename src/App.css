@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 32rem;
   border: 1px solid #eee;
   border-radius: 5px;
-  background: linear-gradient(33deg, #AA99E9, #512DE8), url("./assets/images/tfwc2.jpeg") no-repeat center center;
+  background: linear-gradient(33deg, #AA99E9, #512DE8);
   background-size: cover;
   text-align: center;
   display: grid;
@@ -217,6 +217,8 @@ h1, h2, h3, h4, h5, h6 {
     @media (max-width: 576px) {
       .course-pricing .pricing-card {
         margin-bottom: 1.5em; } }
+    .course-pricing .pricing-card--description {
+      min-height: 100px; }
     .course-pricing .pricing-card--body {
       padding: 2em; }
       .course-pricing .pricing-card--body h3 {
@@ -366,6 +368,17 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 7rem; }
     .features-container .feature-row > div {
       margin: auto; }
+  .features-container .feature-item {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-column-gap: 25px; }
+    @media (max-width: 576px) {
+      .features-container .feature-item {
+        grid-column-gap: 15px; } }
+    .features-container .feature-item img {
+      width: 50px;
+      height: auto;
+      object-fit: contain; }
 
 .layered-cards {
   width: 400px;

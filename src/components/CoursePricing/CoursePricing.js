@@ -10,7 +10,7 @@ const CoursePricing = props => {
       title: 'One Time Upfront Payment',
       subTitle: 'total',
       price: '37,350',
-      description: `Get access to all course material for 5 weeks upfront, and save more than 5%.`,
+      description: `Get access to all course material for 5 weeks upfront, and save more than 5%. Also includes one-on-one coaching sessions.`,
       paymentUrl: 'https://paystack.com/pay/tfwc-onetimepayment'
     },
     {

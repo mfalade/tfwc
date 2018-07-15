@@ -1,6 +1,7 @@
 import React from 'react';
 import { scroller, Element } from 'react-scroll';
 import Banner from '../Banner';
+import { Button } from '../FormElements';
 
 
 const CourseSteps = ({ context }) => {
@@ -97,7 +98,7 @@ const CourseSteps = ({ context }) => {
                       <h3>{ moduleGoal.duration }</h3>
                     </div>
                     <div>
-                      <h3 className="cta large orange" onClick={goToLessons}>View Lessons</h3>
+                      <Button className="btn btn-orange" onClick={goToLessons} text="View Lessons" />
                     </div>
                   </div>
                 </div>

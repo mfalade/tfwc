@@ -18,7 +18,7 @@ const PricingCard = props => {
         <p>{ props.subTitle }</p>
 
         <div className="horizontal-rule"></div>
-        <p>{ props.description }</p>
+        <p className="pricing-card--description">{ props.description }</p>
         <div className="vmm">
           <a 
             className="btn btn-orange"
