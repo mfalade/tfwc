@@ -84,7 +84,7 @@ class Faq extends Component {
 
             <h2 className="mtm bold-4">Who can I reach if I have issues with enrolling or payment?</h2>
             <p>
-              You can contact us directly on +234 708 971 0781 for any enquiries.
+              You can contact us directly on +234 708 971 0781 or +2348173468457 for any enquiries.
             </p>
 
           </div>

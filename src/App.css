@@ -340,10 +340,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 0;
     transition: height .3s ease-in-out; }
     .faq .more-questions.expanded {
-      height: 50em; }
+      height: 55em; }
       @media (max-width: 576px) {
         .faq .more-questions.expanded {
-          height: 90em; } }
+          height: 95em; } }
 
 .features-container {
   margin-top: 7em;
