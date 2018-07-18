@@ -343,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
       height: 55em; }
       @media (max-width: 576px) {
         .faq .more-questions.expanded {
-          height: 95em; } }
+          height: 98em; } }
 
 .features-container {
   margin-top: 7em;
